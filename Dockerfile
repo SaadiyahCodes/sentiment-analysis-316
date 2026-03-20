@@ -10,9 +10,9 @@ COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY dashboard /app/dashboard
-
-WORKDIR /app/dashboard
+COPY main.py .
+COPY index.html .
+COPY models/ ./models/
 
 EXPOSE 8000
 
